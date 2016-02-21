@@ -1,0 +1,9 @@
+---
+ - hosts: ansible2
+   user: root
+   tasks:
+    - name: update Glib
+      yum: name=glibc* state=latest
+    - name: restart named
+      service: name=named state=restarted
+
